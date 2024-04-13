@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
-import { supabase } from '../client'
+import { supabase } from '../client';
 
 const fetchPosts = async () => {
     const {data} = await supabase

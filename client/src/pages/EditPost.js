@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './EditPost.css';
 import  { useState } from 'react';
-import { supabase } from '../client'
+import { supabase } from '../client';
 
 
 const EditPost = ({data}) => {

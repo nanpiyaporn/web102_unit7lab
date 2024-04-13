@@ -1,7 +1,7 @@
 import React from 'react';
 import './CreatePost.css';
 import { useState } from 'react';
-import { supabase } from '../client'
+import { supabase } from '../client';
 
 const CreatePost = async (event) => {
     event.preventDefault();
