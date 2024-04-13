@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './EditPost.css'
+import './EditPost.css';
+import  { useState } from 'react';
 
 const EditPost = ({data}) => {
 
