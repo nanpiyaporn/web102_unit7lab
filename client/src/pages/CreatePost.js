@@ -7,24 +7,23 @@ const CreatePost = async (event) => {
     event.preventDefault();
 
     await supabase
-        .from('Posts')
-        .insert({ title: post.title, author: post.author, description: post.description })
-        .select();
-    window.location = "/";
+    .from('Posts')
+    .insert({ title: post.title, author: post.author, description: post.description })
+    .select();
+window.location = "/";
 }
 
-const [post, setPost] = useState({ title: "", author: "", description: "" })
+    const [post, setPost] = useState({ title: "", author: "", description: "" })
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setPost((prev) => {
+            return {
+                ...prev,
+                [name]: value,
+            }
+        });
+    } 
 
-
-const handleChange = (event) => {
-    const { name, value } = event.target;
-    setPost((prev) => {
-        return {
-            ...prev,
-            [name]: value,
-        }
-    });
-} // Add a closing curly brace here
 
 return (
     <div>
